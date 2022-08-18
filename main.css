@@ -3,6 +3,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    background-color: #fff;
+    top: 0px;
+    z-index: 1;
 }
 
 body {
@@ -41,11 +45,24 @@ button {
 
 .about__image {
     width: 500px;
+  
   }
 
   .about__sun-image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s infinite;
+    animation-timing-function:linear;
+    position: absolute;
+  
+    
+    
+  }
+  
+
+  @keyframes  rotation {
+   from {rotate: 0deg;}
+   to {rotate: 360deg;}
   }
 
   .about {
@@ -189,3 +206,75 @@ justify-content: center;
 
  .footer__links a{
   margin-bottom: 15px;}
+
+
+  /* Планшеты */
+@media (max-width: 1024px) {
+  .about {
+      padding: 115px 20px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 720px) {
+  header {
+      padding: 10px;
+  }
+
+  .header__logo {
+      height: 20px;
+  }
+
+  header a {
+      margin-right: 10px;
+  }
+
+  .about {
+      flex-direction: column-reverse;
+      padding: 50px 10px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+
+  .form {
+      padding: 50px 10px;
+  }
+
+  .form h1 {
+      font-size: 36px;
+  }
+
+  footer {
+      padding: 50px 10px;
+  }
+
+  .footer__container {
+      flex-direction: column;
+  }
+}
